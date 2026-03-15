@@ -1,0 +1,201 @@
+img {
+    max-width: 100%;
+}
+
+/*poner en una fila las imágenes*/
+.galeria {
+    display: flex
+}
+
+.galeria img {
+    width: 33%;
+}
+
+/*Botones*/
+.navegacion {
+    display: flex;
+}
+
+.navegacion button {
+    flex: 1;
+}
+
+/*Productos*/
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Tarjeta*/
+.tarjeta {
+    width: 50%;
+}
+
+/* Menú de acciones */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    flex: 1 1 20%;
+}
+
+/* Sección de información */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info img {
+    width: 50%;
+    height: auto;
+}
+
+.info .texto {
+    width: 50%;
+    /* el texto ocupa la otra mitad */
+}
+
+/* Tarjetas de testimonios */
+.testimonios {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonio {
+    flex: 1;
+    padding: 15px;
+    /* relleno interno */
+    border: 1px solid #ccc;
+    /* borde para que se vea */
+    border-radius: 5px;
+}
+
+/* Panel de estadísticas */
+.estadisticas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bloque {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Menú de categorías */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+.categoria {
+    width: 30%;
+}
+
+/* Sección de artículos */
+.articulos {
+    display: flex;
+    gap: 20px;
+}
+
+.articulo {
+    width: 33%;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    gap: 20px;
+}
+
+.columna {
+    width: 25%;
+    padding: 15px;
+}
+
+.columna a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+/*que se ajuste version movil*/
+@media (max-width: 600px) {
+    .galeria {
+        flex-direction: column;
+    }
+
+    .galeria img {
+        width: 100%;
+    }
+
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .acciones button {
+        flex: 1 1 48%;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info img,
+    .info .texto {
+        width: 100%;
+    }
+
+    .testimonios {
+        flex-direction: column;
+    }
+
+    .testimonio {
+        width: 100%;
+    }
+
+    .bloque {
+        width: 48%;
+        /* aproximadamente la mitad del ancho */
+    }
+
+    .estadisticas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .categoria {
+        width: 48%;
+    }
+
+    .articulos {
+        flex-direction: column;
+    }
+
+    .articulo {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .columna {
+        width: 100%;
+    }
+}
