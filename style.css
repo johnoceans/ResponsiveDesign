@@ -1,0 +1,139 @@
+img {
+    max-width: 100%;
+}
+
+/*poner en una fila las imágenes*/
+.galeria {
+    display: flex
+}
+
+.galeria img {
+    width: 33%;
+}
+
+/*Botones*/
+.navegacion {
+    display: flex;
+}
+
+.navegacion button {
+    flex: 1;
+}
+
+/*Productos*/
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Tarjeta*/
+.tarjeta {
+    width: 50%;
+}
+
+/* Menú de acciones */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /*Espacio entre los bottones*/
+}
+
+.acciones button {
+    flex: 1;
+    min-width: 100px;
+}
+
+/* Sección de información */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info img {
+    width: 50%;
+    height: auto;
+}
+
+.info .texto {
+    width: 50%;
+    /* el texto ocupa la otra mitad */
+}
+
+/* Tarjetas de testimonios */
+.testimonios {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonio {
+    flex: 1;
+    padding: 15px;
+    /* relleno interno */
+    border: 1px solid #ccc;
+    /* borde para que se vea */
+    border-radius: 5px;
+}
+
+/* Panel de estadísticas */
+.estadisticas{
+    display: flex;
+    gap: 20px;      
+}
+
+.bloque{
+    flex: 1;        
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*que se ajuste version movil*/
+@media (max-width: 600px) {
+    .galeria {
+        flex-direction: column;
+    }
+
+    .galeria img {
+        width: 100%;
+    }
+
+    .navegacion {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .acciones button {
+        flex: 0 0 48%;
+        margin-bottom: 5px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info img,
+    .info .texto {
+        width: 100%;
+    }
+
+    .testimonios {
+        flex-direction: column;
+        /* tarjetas en columna */
+    }
+
+    .testimonio {
+        width: 100%;
+        /* cada tarjeta ocupa todo el ancho */
+    }
+    
+    .bloque{
+        width: 48%;    /* aproximadamente la mitad del ancho */
+        margin-bottom: 10px;
+    }
+}
